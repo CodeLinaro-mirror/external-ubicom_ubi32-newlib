@@ -288,6 +288,9 @@ case "${host_cpu}" in
   tic80*)
 	machine_dir=tic80
 	;;
+  ubi32*)
+	machine_dir=ubi32
+	;;
   v70)
 	;;
   v810)

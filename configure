@@ -3549,6 +3549,9 @@ case "${target}" in
   ft32-*-*)
     noconfigdirs="$noconfigdirs ${libgcj}"
     ;;
+  ubi32-*-*)
+    noconfigdirs="$noconfigdirs ${libgcj}"
+    ;;
   *-*-lynxos*)
     noconfigdirs="$noconfigdirs ${libgcj}"
     ;;
@@ -3615,6 +3618,9 @@ case "${target}" in
     ;;
   sparc*-*-*)
     libgloss_dir=sparc
+    ;;
+  ubi32*-*-*)
+    libgloss_dir=ubi32
     ;;
 esac
 

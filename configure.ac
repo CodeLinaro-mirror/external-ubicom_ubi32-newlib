@@ -686,6 +686,9 @@ case "${target}" in
   powerpc-*-aix* | rs6000-*-aix*)
     noconfigdirs="$noconfigdirs target-libquadmath"
     ;;
+  ubi32*-*-*)
+    noconfigdirs="$noconfigdirs target-libquadmath"
+    ;;
 esac
 
 # Disable libssp for some systems.
@@ -783,6 +786,8 @@ case "${target}" in
   sh-*-* | sh[[34]]*-*-*)
     ;;
   sparc*-*-*)
+    ;;
+  ubi32*-*-*)
     ;;
   x86_64-*-*)
     ;;
@@ -885,6 +890,9 @@ case "${target}" in
   ft32-*-*)
     noconfigdirs="$noconfigdirs ${libgcj}"
     ;;
+  ubi32-*-*)
+    noconfigdirs="$noconfigdirs ${libgcj}"
+    ;;
   *-*-lynxos*)
     noconfigdirs="$noconfigdirs ${libgcj}"
     ;;
@@ -951,6 +959,9 @@ case "${target}" in
     ;;
   sparc*-*-*)
     libgloss_dir=sparc
+    ;;
+  ubi32*-*-*)
+    libgloss_dir=ubi32
     ;;
 esac
 

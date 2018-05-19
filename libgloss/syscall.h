@@ -55,4 +55,7 @@
 /* SID simulator runtime reconfiguration. */
 #define SYS_reconfig	 25
 
+/* Required to run gdb testsuite. */
+#define SYS_sleep	 26
+
 #endif
