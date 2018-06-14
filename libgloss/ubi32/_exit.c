@@ -38,9 +38,11 @@ void _exit (n)
      constructors done in crt1.c. */
   _do_dtors();
 
+#ifdef FIXME
   /* Deregister any eh frames.  */
   if(___eh_frame_begin && *___eh_frame_begin)
     __deregister_frame_info (___eh_frame_begin);
+#endif
 
   INT_SYS (SYS_exit, n, 0, 0);
 }

@@ -1,5 +1,5 @@
-OUTPUT_FORMAT("elf32-littleubi32", "elf32-bigubi32",
-	      "elf32-littleubi32")
+OUTPUT_FORMAT("elf32-littleubicom32", "elf32-bigubicom32",
+	      "elf32-littleubicom32")
 OUTPUT_ARCH(ubi32)
 ENTRY(_start)
 SEARCH_DIR("install/ubi32-none-elf/lib");
