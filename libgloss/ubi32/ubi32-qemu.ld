@@ -264,14 +264,14 @@ SECTIONS
   /* Define _heapsize on at the commandline using -Wl,--defsym,_heapsize=value   */
   /* if you want to make the heap smaller than the default, effectively limiting */
   /* how much memory can be allocated.                                           */
-  .heap :
+  .heap (NOLOAD) :
   {
     *(.heap)
     . = (DEFINED(_heapsize) ? (. + _heapsize) : 0x10c000);
     _heaplimit = .;
   }  > flashram
   /* Define _stacksize on at the commandline using -Wl,--defsym,_stacksize=value   */
-  .stack :
+  .stack (NOLOAD) :
   {
     . = (DEFINED(_stacksize) ? (. + _stacksize) : 0x10000);
      _stack = . ;
